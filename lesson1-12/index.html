@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <h3>Post Data</h3>
+          <hr />
+          <div>
+            <!-- lesson3 -->
+            <h3>Create Post</h3>
+            <h1>Learn Vue Js 3</h1>
+            <p>{{getText()}}</p>
+            <a v-bind:href="link">Click here to go to vue webiste</a>
+            <p>{{test}}</p>
+
+            <!-- lesson4 -->
+            <button
+              class="btn btn-info text-white mx-3"
+              v-on:click="onIncrement()"
+            >
+              Increment
+            </button>
+            <button class="btn btn-primary" v-on:click="onDecrement()">
+              Decrement
+            </button>
+            <h1 class="mt-4 display-1">{{count}}</h1>
+          </div>
+
+          <!-- lesson5 -->
+          <div class="mt-5">
+            <div class="form-group">
+
+                <label class="mb-3">Enter your First name</label>
+                <input
+                  type="text"
+                  v-on:input="setName($event)"
+                  v-bind:value="name"
+                  class="form-control"
+                />
+                <label class="mb-3">Enter your Last name</label>
+                <input
+                  type="text"
+                  v-on:input="setLastName($event)"
+                  v-bind:value="lastName"
+                  class="form-control"
+                />
+
+                <p>Your name is : {{fullName}}</p>
+                <!-- <p>Your name is : {{setFullName()}}</p> -->
+                
+                <form action="">
+
+                <!-- form 2 -->
+                <label class="mt-3">What is your name?</label>
+                <input type="text" class="form-control mt-2" />
+                <button class="btn btn-success mt-2" type="submit">Submit Shid</button>
+                
+              </form>
+              <span>Multiline message is:</span>
+              <p style="white-space: pre-line">{{ message }}</p>
+              <textarea
+                v-model="message"
+                placeholder="add multiple lines"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+  crossorigin="anonymous">
+  </script>
+
+  <script src="../lesson1-12/app.js"></script>
+
+
+  </body>
+</html>
